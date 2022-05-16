@@ -5,7 +5,7 @@ const validator = require("../validators/validator");
 const reviewModel = require("../model/reviewModel");
 
 const createBook = async function (req, res) {
-  try {
+ // try {
     const bookData = req.body;
 
     if (!validator.isValidRequestBody(bookData)) {
@@ -89,10 +89,10 @@ const createBook = async function (req, res) {
     return res
       .status(200)
       .send({ status: true, message: "success", data: books });
-  } catch (error) {
-    console.log(error);
-    return res.status(500).send({ status: false, message: error.message });
-  }
+  // } catch (error) {
+  //   console.log(error);
+  //   return res.status(500).send({ status: false, message: error.message });
+  //}
 };
 
 
